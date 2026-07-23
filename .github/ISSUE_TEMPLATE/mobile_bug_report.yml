@@ -63,6 +63,8 @@ body:
       options:
         - Phone
         - Tablet
+      validations:
+      required: true
 
   - type: input
     id: mobile-device
