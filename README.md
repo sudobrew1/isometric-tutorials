@@ -1,5 +1,9 @@
 # Isometric Game Tutorials
 
+<p align="center">
+  <img src="src/images/grass-dirt-tiles-for-readme.png" width="600" alt="Isometric tiles rendered in Blender">
+</p>
+
 Tutorials for building pre-rendered isometric game art including modeling and rendering
 tiles in Blender, then getting them into Godot and Unity.
 
