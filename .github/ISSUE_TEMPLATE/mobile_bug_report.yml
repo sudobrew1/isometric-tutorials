@@ -21,7 +21,8 @@ body:
 
   - type: textarea
     id: expected
-    attributes:
+    attributes:    validations:
+      required: true
       label: Expected result
       description: What should have happened?
     validations:
@@ -63,7 +64,7 @@ body:
       options:
         - Phone
         - Tablet
-      validations:
+    validations:
       required: true
 
   - type: input
