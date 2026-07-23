@@ -11,6 +11,30 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Give a list of steps to reproduce the issue
+    validations:
+      required: true
+
+    - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened instead?
+    validations:
+      required: true
+
   - type: input
     id: page
     attributes:
@@ -28,17 +52,9 @@ body:
         - Firefox
         - Safari
         - Other
+        - All Browsers
     validations:
       required: true
-
-  - type: dropdown
-    id: device
-    attributes:
-      label: Device
-      options:
-        - Desktop
-        - Phone
-        - Tablet
 
   - type: textarea
     id: screenshot
