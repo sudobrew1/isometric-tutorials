@@ -1,6 +1,6 @@
 # Isometric Game Tutorials
 
-Tutorials for building pre-rendered isometric game art — modeling and baking
+Tutorials for building pre-rendered isometric game art including modeling and rendering
 tiles in Blender, then getting them into Godot and Unity.
 
 **Live site:** Coming soon!
@@ -26,4 +26,4 @@ Prism for syntax highlighting.
 
 ## License
 
-Code is MIT. Tutorial content is free to use — see LICENSE.
+Code is MIT. Tutorial content is free to use. See LICENSE.
