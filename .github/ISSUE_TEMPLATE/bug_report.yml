@@ -57,7 +57,7 @@ body:
       required: true
 
   - type: textarea
-    id: screenshot
+    id: screenshot-or-screen-recording
     attributes:
-      label: Screenshot
-      description: Drag an image in if you have one
+      label: Screenshot or screen recording
+      description: Drag an image or video in if you have one. Videos help a lot for layout and interaction bugs. Supported files -- .mp4, .mov or .webm, under 10MB.
