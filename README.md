@@ -1,6 +1,6 @@
 # Isometric Game Tutorials
 
-<p align="center">
+<p align="left">
   <img src="src/images/grass-dirt-tiles-for-readme.png" width="600" alt="Isometric tiles rendered in Blender">
 </p>
 
