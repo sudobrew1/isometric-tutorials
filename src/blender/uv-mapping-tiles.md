@@ -58,7 +58,36 @@ Now that we have our grass texture added as a material to our object, let's prev
 
 From here, you can scale, rotate or move the UV mesh around the texture. If you feel the texture is too granular and would like to see more detail, scale the mesh smaller to get more details on the blades of grass, rotate it for the grass blades to go in a different direction or move to get certain details if you have something in it you'd like to include, like flowers or specific cracks in dirt.
 
-### 4. Rendering and Saving
+### 4. Rendering
+In Blender there are two types of Render Engines: EVEE and Cycles. EVEE is a real-time render engine for instant feedback and speed. Cycles is a physically-based, ray-tracing engine that simulates real-world light behavior to get the most realistic look out of your 3D models and needs much more computational power to completely render the Scene. Navigate to the Properties panel and click the "Render" tab to change these settings. By default, Blender will set the Engine to EVEE. Press `F12` to view the render.
+
+<figure>
+    <a href="/images/evee-blender-render.png" class="lightbox">
+        <img src="/images/evee-blender-render.png" alt="Blender Render in EVEE Render Engine"
+            width="550" height="457" loading="lazy">
+    </a>
+</figure>
+
+This is the render result from our scene. Now switch to Cycles and choose "Device" to "GPU Compute" to use your computer's graphics card to help render the scene faster. Hit `F12` again to render your scene in Cycles this time.
+
+As you can see, there isn't much of a difference between the two renders, because the Plane object is a flat surface with no shadows casting over it. For example, if an object is added in the scene, we can compare it side-by-side between both Render Engines:
+
+<div class="figure-row">
+  <figure>
+    <a href="/images/evee-palm-tree-annotated.png">
+      <img src="/images/evee-palm-tree-annotated.png" alt="EVEE Render" loading="lazy">
+    </a>
+  </figure>
+  <figure>
+    <a href="/images/cycles-palm-tree-annotated.png">
+      <img src="/images/cycles-palm-tree-annotated.png" alt="Cycles Render" loading="lazy">
+    </a>
+  </figure>
+</div>
+
+### 5. Lighting
+
+### 6. Saving the Render
 
 Once you are content with how the texture looks, press `F12` to render the object and a new "Blender Render" window will appear. Optionally, use the scroll wheel or click and drag on the zoom in/zoom out button on the right to view the render up close or far away. Click on `Image > Save As` and name your new 256x256 tile sprite something appropriate (like grass-01.png) and save it.
 

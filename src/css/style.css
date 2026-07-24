@@ -411,3 +411,15 @@ main {
   vertical-align: -0.2em;
   display: inline-block;
 }
+
+.figure-row {
+  display: flex;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.figure-row figure {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
