@@ -1,0 +1,50 @@
+name: Feature
+description: A new capability or content for the site
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should it do?
+      description: Describe the feature from a reader's point of view.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it worth building?
+      description: What problem does this solve, or what does it make better?
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: What has to be true for this to be finished?
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Content (a tutorial page or section)
+        - Site feature (layout, interaction, theming)
+        - Tooling (build, CI, deploy)
+        - Docs (README, contributing)
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything else — references, links, things you're unsure about.
