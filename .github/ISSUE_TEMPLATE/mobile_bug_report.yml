@@ -1,7 +1,7 @@
 name: Mobile Bug report
 description: Something is broken, visually wrong, or behaves unexpectedly on phones or tablets
 title: "[Mobile Bug]"
-labels: ["mobile-bug"]
+labels: ["mobile bug"]
 body:
   - type: textarea
     id: what-happened
