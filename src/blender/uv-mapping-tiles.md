@@ -70,7 +70,7 @@ In Blender there are two types of Render Engines: EVEE and Cycles. EVEE is a rea
 
 This is the render result from our scene. Now switch to Cycles and choose "Device" to "GPU Compute" to use your computer's graphics card to help render the scene faster. Hit `F12` again to render your scene in Cycles this time.
 
-As you can see, there isn't much of a difference between the two renders, because the Plane object is a flat surface with no shadows casting over it. For example, if an object is added in the scene, we can compare it side-by-side between both Render Engines:
+As you can see, there isn't much of a difference between the two renders, because the Plane object is a flat surface with no shadows casting over it. If an object is added in the scene, we can compare it side-by-side between both Render Engines:
 
 <div class="figure-row">
   <figure>
@@ -85,10 +85,41 @@ As you can see, there isn't much of a difference between the two renders, becaus
   </figure>
 </div>
 
+EEVEE uses approximate light rather than simulate it. Shadows and edges are sharper with aliasing and light is faked. The image is flat but has very fast rendering time.
+
+Cycles uses path tracing techniques to simulate individual rays of light bouncing around the scene. Shadows are much softer and light actually reflects off the ground back to the model. It's much more physically accurate, but at the cost of being much slower to render and will look grainy until enough samples accumulate.
+
+For a 2D isometric game, you can use either render engine to suit your style. For a more old-school, 90's PC game look EVEE is perfect. If you want your game assets to look a little more polished, use Cycles.
+
 ### 5. Lighting
+
+If you noticed, our render looks a little too dark for our liking. To brighten it up, let's experiment with light!
+
+There is already a light object in our scene. Select it in the Scene Collection panel and click on the "Data" tab.
+
+<figure>
+    <a href="/images/light-panel.png" class="lightbox">
+        <img src="/images/light-panel.png" alt="Light panel in Blender"
+            width="434" height="633" loading="lazy">
+    </a>
+</figure>
+
+There are four types of lighting in Blender:
+
+<strong>Point</strong> - A single point of light radiating in all directions, like a light bulb. The farther away an object is away from it, the less bright it gets. Increasing the radius gives it a bigger "bulb" and softer shadows.
+
+<strong>Sun</strong> - Parallel rays from light infinitely far away. Positioning does not matter, however rotation does. You can place an object very far away and the light intensity will stay the same. The Angle setting controls the softness and if you want overcast, increase the value.
+
+<strong>Spot</strong> - Is just like a point light, but with a cone over it. Again, the farther away the object is, the less bright it is. Adjust the Spot Size for the cone's angle and Blend for how soft the edges are around the cone.
+
+<strong>Area</strong> - Emits from a surface like a rectangle, disk or ellipse. Think of this like light coming through a window. Increase the size (X,Y) to get softer shadows.
+
+For this tutorial, we will use Sun since the light will evenly spread across the tile. Right now, the Exposure is set to 0 which is extremely bright, causing the render to be completely white. Decrease the value to around -7 to get the tile have just the right amount of brightness. In the Viewport Shading settings, select "Rendered" to view your changes in real-time.
+
+Feel free to play around with the Color and Temperature settings to get different color lighting.
 
 ### 6. Saving the Render
 
-Once you are content with how the texture looks, press `F12` to render the object and a new "Blender Render" window will appear. Optionally, use the scroll wheel or click and drag on the zoom in/zoom out button on the right to view the render up close or far away. Click on `Image > Save As` and name your new 256x256 tile sprite something appropriate (like grass-01.png) and save it.
+Once you are content with how the texture and lighting looks, press `F12` to render the object and a new "Blender Render" window will appear. Optionally, use the scroll wheel or click and drag on the zoom in/zoom out button on the right to view the render up close or far away. Click on `Image > Save As` and name your new 256x256 tile sprite something appropriate (like grass-01.png) and save it.
 
-Congratulations! You just made your first asset to import into Godot or Unity to use in your game.
+<h2>Congratulations! You just made your first asset to import into Godot or Unity.</h2>
