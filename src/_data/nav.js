@@ -21,7 +21,8 @@ module.exports = [
     label: "Unity",
     open: true,
     items: [
-      { label: "Installing", url: "/unity/installing/" }
+      { label: "Installing", url: "/unity/installing/" },
+      { label: "Project Setup", url: "/unity/project-setup/" }
     ],
   },
 ];
