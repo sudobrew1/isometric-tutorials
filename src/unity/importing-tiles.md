@@ -38,14 +38,14 @@ It looks like our tiles are a little too big, so we'll scale them exactly to the
 If you would like to move your tiles in the Tile palette for better organization, select Edit (pencil icon), Select (cursor icon along the top buttons), select your tile you wish to move, then click Move Selection.
 
 <figure>
-  <video src="/videos/moving-tiles.mp4" width="1068" height="1502"
+  <video src="/videos/moving-tiles.webm" width="1068" height="1502"
          controls muted loop playsinline preload="metadata"></video>
 </figure>
 
 Select the tile you wish to paint in the palette, make sure the brush tool is selected, then head over to the Scene, left-click on a tile to paint. If you want to paint an entire area, click the "Paint a filled box with active brush" next to the brush button. Click the Erase button to remove tiles. You can even select multiple tiles at once.
 
 <figure>
-  <video src="/videos/painting-tiles.mp4" width="3840" height="2076"
+  <video src="/videos/painting-tiles.webm" width="3840" height="2076"
          controls muted loop playsinline preload="metadata"></video>
 </figure>
 
@@ -102,6 +102,6 @@ In <strong>Pivot</strong>, click the `Center` drop-down and select `Custom`. Set
 Follow step 2. Painting Tiles again to open a Tile Palette and add this time, add your slab tiles. Again, left-click to paint your tiles with the brush tool selected. There should be no tiles clipping through eachother and fit evenly into the Tilemap.
 
 <figure>
-  <video src="/videos/painting-slab-tiles.mp4" width="3840" height="2076"
+  <video src="/videos/painting-slab-tiles.webm" width="3840" height="2076"
          controls muted loop playsinline preload="metadata"></video>
 </figure>
