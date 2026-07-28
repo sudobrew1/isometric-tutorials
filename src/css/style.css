@@ -251,6 +251,14 @@ main h4::after {
   border-radius: 6px;
 }
 
+main video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-block: 1.5rem;
+  border-radius: 6px;
+}
+
 #lightbox {
   border: 0;
   padding: 0;
