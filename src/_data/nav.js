@@ -23,7 +23,8 @@ module.exports = [
     items: [
       { label: "Installing", url: "/unity/installing/" },
       { label: "Project Setup", url: "/unity/project-setup/" },
-      { label: "Importing Tiles", url: "/unity/importing-tiles/" }
+      { label: "Importing Tiles", url: "/unity/importing-tiles/" },
+      { label: "Rule Tiles", url: "/unity/rule-tiles/" }
     ],
   },
 ];
