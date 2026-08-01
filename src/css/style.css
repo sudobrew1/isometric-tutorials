@@ -239,6 +239,11 @@ main h4::after {
   background: linear-gradient(to right, rgb(255 255 255 / 0.25), transparent);
 }
 
+main a:link, main a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 .video {
   aspect-ratio: 16 / 9;
   margin-block: 1.5rem;
