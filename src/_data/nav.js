@@ -15,7 +15,8 @@ module.exports = [
     open: true,
     items: [
       { label: "Installing", url: "/godot/installing/" },
-      { label: "Project Setup", url: "/godot/project-setup/" }
+      { label: "Project Setup", url: "/godot/project-setup/" },
+      { label: "Importing Tiles", url: "/godot/importing-tiles/" }
     ],
   },
     {
