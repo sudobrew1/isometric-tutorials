@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Installing Unity"
+title: "Part 1 - Installing Unity"
 hideBackToTop: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "UV Mapping Tile Textures"
+title: "Part 3 - UV Mapping Tile Textures"
 ---
 
 UV mapping is the process of "unwrapping" a 3D object's surface and laying it flat. Think about it like cutting apart a cardboard box and flattening it out. This creates a canvas that is used as a guide to wrap 2D textures, images and colors onto the 3D model.
