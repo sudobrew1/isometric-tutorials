@@ -59,3 +59,12 @@ Go to <strong>TileMap</strong>, select <strong>Terrains</strong> then <strong>Gr
   <video src="/videos/random-tile-probability.webm" width="3840" height="2076"
          controls muted loop playsinline preload="metadata"></video>
 </figure>
+
+### Video References
+
+<div class="video">
+  <iframe src="https://www.youtube-nocookie.com/embed/B3bS9AGTSAw"
+          title="Godot Isometric Tilemap Tutorial | Master Tilesets, Terrain & Auto-Tiling"
+          loading="lazy"
+          allowfullscreen></iframe>
+</div>
