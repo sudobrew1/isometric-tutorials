@@ -3,7 +3,7 @@ layout: base.njk
 title: "Part 2 - Modeling Tiles"
 ---
 
-First, we begin with 3D modeling the tile template in Blender. After creating this template, you can easily alter the look by adding foliage, different wall directions, buildings, props and textures to make multiple different tilesets for your game.
+First, we begin with 3D modeling the tile template in Blender. After creating this template, you can easily alter the look by adding/replacing different textures, and using it as a base to render foliage, different wall directions, buildings and props to make multiple assets for your game.
 
 ### 1. Open a new file in Blender
 
@@ -30,12 +30,12 @@ Select the default cube and delete it. Select `Output > Format` in the Propertie
         <img src="/images/scene-resolution-panel.png" alt="Scene panel in Blender"
             width="452" height="555" loading="lazy">
     </a>
-    <figcaption class="img-caption">This tutorial will use 256x128. Feel free to use any resolution you desire.</figcaption>
+    <figcaption class="img-caption">This tutorial will use 256x128. Feel free to use any resolution you want.</figcaption>
 </figure>
 
 <h3>3. Add background transparency </h3>
 
-Next, click on the Render tab in the Properties panel, go to the Film section and set the Filter Size to 0px and click the Transparent checkbox. This will ensure that you have a transparent background when rendering the image of the tile.
+Next, click on the <strong>Render</strong> tab in the Properties panel, go to the <strong>Film</strong> section and set the <strong>Filter Size</strong> to `0.00 px` and click the <strong>Transparent</strong> checkbox to get a transparent background when rendering the .png image of the tile sprite.
 
 <figure>
     <a href="/images/render-panel.png" class="lightbox">
@@ -46,7 +46,7 @@ Next, click on the Render tab in the Properties panel, go to the Film section an
 
 ### 4. Add a Plane Mesh and Camera
 
-Underneath the main toolbar, go to `Add > Mesh > Plane` or press `Shift + A > Mesh > Plane`. Set it to 1x1 meter. Press `Tab` to go into Edit Mode, right-click and select `Subdivide`. Next, add a camera (Shift + A > Camera) and reset its rotation by pressing `alt+R`. Set the X rotation axis to 60 degrees, and the Z rotation axis to 45 degrees. Drag the camera way from the plane mesh for now.
+Under the main toolbar, go to `Add > Mesh > Plane` or press `Shift + A > Mesh > Plane`. Set it to 1x1 meter. Press `Tab` to go into Edit Mode, right-click and select `Subdivide`. Next, add a camera (Shift + A > Camera) and reset its rotation by pressing `alt+R`. Set the X rotation axis to 60 degrees, and the Z rotation axis to 45 degrees. Drag the camera way from the plane mesh for now.
 
 <figure>
     <a href="/images/camera-rotation.png" class="lightbox">
@@ -55,9 +55,9 @@ Underneath the main toolbar, go to `Add > Mesh > Plane` or press `Shift + A > Me
         </a>
 </figure>
 
-### 5. Set lens to orthograhic view
+### 5. Set Lens to orthograhic view
 
-Select the camera, then click on the Data tab in the properties panel. Go to Lens and change the type from perspective to orthographic.
+Select the <strong>Camera</strong>, then click on the <strong>Data</strong> tab in the Properties panel (green camera icon). Go to Lens and change the type from perspective to <strong>Orthographic</strong>.
 
 <figure>
     <a href="/images/camera-orthographic-view.png" class="lightbox">
@@ -68,9 +68,9 @@ Select the camera, then click on the Data tab in the properties panel. Go to Len
 
 ### 6. Setting orthographic scale</h3>
 
-Press 0 on the keyboard's numpad to change to camera view. If you don't have a numpad on your keyboard, adjust the viewfinder to where you want the camera, then click on `View > Align View > Align Active Camera to View`.
+Press `0` on the keyboard's numpad to change to camera view. If you don't have a numpad on your keyboard, adjust the viewfinder to where you want the camera, then click on `View > Align View > Align Active Camera to View`.
 
-Since the orthographic scale is set to 6.0, it needs to be scaled down for the tile to fit inside the camera's view. In the `Data > Lens` tab, throw in this formula into the Orthographic Scale field: 
+Since the orthographic scale is set to `6.0`, it needs to be scaled down for the tile to fit inside the camera's view. In the `Data > Lens` tab, throw in this formula into the Orthographic Scale field: 
 
 `X*(1/cos(radians(45)))`
 
@@ -80,7 +80,7 @@ Then set "X" in for whatever scale you're looking for. For now, we just need all
 
 Hit enter and it should calculate to `1.414`.
 
-### 7. Moving the camera
+### 7. Moving the Camera
 
 Next we need to move the camera precisely over the tile. Enable snapping and select the `Snap Target to Vertex`. Then select `Tranform Orientations` next to the snap button and select `Normal`.
 
@@ -131,11 +131,11 @@ Now you can render buildings, walls, props and more!
     </a>
 </figure>
 
+Generally, you should render tiles, props and walls seperately to easily mix-and-match pieces and better performance optimization. Use the base tile as a guide for your props and walls, then turn off rendering for the <strong>Plane</strong> object in the <strong>Scene Collection</strong>.
 
+## 9. Optional - Set tile thickness
 
-## 9. Optional - Set Tile Thickness
-
-If you would like to add some extra 3D flare to your tile designs, here's an optional guide.
+If you would like to add thickness to your tile designs, here's an optional guide.
 
 <h3>Extruding downward</h3>
 
@@ -154,7 +154,7 @@ The final result should look something like this:
     </a>
 </figure>
 
-## Video References
+## Video references
 
 <div class="video">
   <iframe src="https://www.youtube-nocookie.com/embed/dlBXiDZNWI0"
