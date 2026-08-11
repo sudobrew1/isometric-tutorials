@@ -5,7 +5,7 @@ title: "Part 4 - Texture Painting Tiles"
 
 Texture painting in Blender allows you to to paint textures directly on a 3D model's surface with a brush. This is a different method to editing a 2D image in a photo editing program like Gimp or Photoshop and guessing how that image will appear on the UV map. Instead, you are actually editing an image file in Blender, but you can actually see the actual result of the brush strokes on the geometry.
 
-In this context, this tutorial will go over how to blend two textures together to get seemless transitions from grass to dirt and vice versa. This will make your levels look less jarringly patchy and more natural like the image below.
+In this tutorial, you will go over how to blend two textures together to get seemless transitions from grass to dirt and vice versa. This will make your levels look less jarringly patchy and more natural like the image below.
 
 <figure>
     <a href="/images/seemless-tiles.png" class="lightbox">
@@ -37,9 +37,9 @@ At the bottom of the this view, there are three nodes that make the current gras
 
 ### 2. Adding & Mixing Image Textures
 
-In the Shader editor view, go to `Add > Texture > Image Texture` or press `Shift + A` and search for and select "Image Texture." Place this node under the current grass Image Texture node. Then click on <strong>Open</strong> and select your texture you'd like to mix with. In this case, I'm going with `Ground079S_1K-JPG_Color.jpg` to mix my grass texture with dirt.
+In the Shader editor view, go to `Add > Texture > Image Texture` or press `Shift + A` and search for and select <strong>Image Texture</strong>. Place this node under the current grass Image Texture node. Then click on <strong>Open</strong> and select your texture you'd like to mix with. In this case, I'm going with `Ground079S_1K-JPG_Color.jpg` to mix my grass texture with dirt.
 
-Before we connect anything, we need to add a <strong>Mix Color</strong> node so that these two textures can combine with eachother based on a Factor of 0.000 to 1.000. Go to `Add > Color > Mix Color` or press `Shift + A` and search for "Mix Color." Disconnect the Color output on the grass texture and plug it into the Mix Color's "A" input, then connect the dirt's Color output to the "B" input. Finally, connect the Mix Color's "Result" output into the "Base Color" input for <strong>Principled BSDF</strong> The graph should look like this:
+Before we connect anything, we need to add a <strong>Mix Color</strong> node so that these two textures can combine with eachother based on a Factor of 0.000 to 1.000. Go to `Add > Color > Mix Color` or press `Shift + A` and search for <strong>Mix Color</strong>. Disconnect the Color output on the grass texture and plug it into the Mix Color's <strong>A</strong> input, then connect the dirt's Color output to the <strong>B</strong> input. Finally, connect the <strong>Mix Color's Result</strong> output into the <strong>Base Color</strong> input for <strong>Principled BSDF</strong> The graph should look like this:
 
 <figure>
     <a href="/images/mixing-textures-shader-editor.png" class="lightbox">
@@ -52,7 +52,7 @@ Right now, Mix Color's Factor setting is set to `1.000` which will show only dir
 
 ### 3. Adding an Image Texture Mask
 
-Add another image texture node and rename it to "terrain_mask." This will be our mask to paint where we want the grass, represented as `0` and dirt represented as `1`. Click on <strong>New</strong>, name the image to "terrain_texture_half" and uncheck the <strong>Alpha</strong> setting if it's checked. Then click "New Image". Set the <strong>Color Space</strong> to `Non-Color`. Plug the "Color" output into <strong>Mix Color's</strong> "Factor" input.
+Add another image texture node and rename it to `terrain_mask`. This will be our mask to paint where we want the grass, represented as `0` and dirt represented as `1`. Click on <strong>New</strong>, name the image to `terrain_texture_half` and uncheck the <strong>Alpha</strong> setting if it's checked. Then click "New Image". Set the <strong>Color Space</strong> to `Non-Color`. Plug the <strong>Color</strong> output into <strong>Mix Color's Factor</strong> input.
 
 <figure>
     <a href="/images/adding-terrain-mask.png" class="lightbox">
@@ -61,9 +61,9 @@ Add another image texture node and rename it to "terrain_mask." This will be our
     </a>
 </figure>
 
-Click on the <strong>terrain_mask</strong> node we just created then click on the <strong>Texture Paint</strong> tab at the top. In this view, you'll see a black square in the Image editor to the left and the grass texture in the 3D Viewport to the right. Set the brush color to white in the Color Picker to start painting the dirt texture. You can use a variety of brushes at the bottom to get a hard or soft edge on your brushes. You can also change the size and strength of the brush at the top.
+Click on the <strong>terrain_mask</strong> node we just created then click on the <strong>Texture Paint</strong> tab at the top. In this view, you'll see a black square in the <strong>Image editor</strong> to the left and the grass texture in the <strong>3D Viewport</strong> to the right. Set the brush color to white in the <strong>Color Picker</strong> to start painting the dirt texture. You can use a variety of brushes at the bottom to get a hard or soft edge on your brushes. You can also change the size and strength of the brush at the top.
 
-On the <strong>terrain_mask</strong> node, we selected the default color to be black which represents `0` for grass in the Factor input on the Mix Color node. White represents `1` for dirt.
+On the <strong>terrain_mask</strong> node, we selected the default color to be black which represents `0` for grass in the Factor input on the <strong>Mix Color</strong> node. White represents `1` for dirt.
 
 <figure>
   <video src="/videos/terrain-mask-painting.webm" width="3840" height="2076"
@@ -74,7 +74,7 @@ Tip: In the 3D Viewport on the right, hit `0` on the keyboard to set the view to
 
 To create more tile variations like corner edges, you'll need a different mask image. Here are two ways to do this:
 
-<strong>Swap the image on the existing Image Texture node</strong> - In the Image Editor, create and save a new mask. Then, back over to the Shader editor, on the <strong>terrain_mask</strong> node, click on "Browse image to be linked" (icon to the left of the field) and choose your new file. The node stays where it's at and only the image changes
+<strong>Swap the image on the existing Image Texture node</strong> - In the Image Editor, create and save a new mask. Then, back over to the Shader editor, on the <strong>terrain_mask</strong> node, click on <strong>Browse image to be linked</strong> (icon to the left of the field) and choose your new file. The node stays where it's at and only the image changes
 
 <strong> Or add a second node </strong> - Create another Image Texture with a new mask, then drag its Color output to the Mix node's Factor input, replacing the connection from the original <strong>terrain_mask</strong> Image Texture node. You can keep both masks in the graph so you can swith between them.
 
