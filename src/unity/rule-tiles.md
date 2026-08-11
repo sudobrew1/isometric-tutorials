@@ -9,7 +9,7 @@ Before this part of the tutorial, go to <strong>Blender > Texture Painting</stro
 
 ### 1. Rule Tile & Scene Setup
 
-From the Main Menu, select `Assets > Create > Tiles > Isometric Rule Tile`. Rename it in your Assets folder to whatever you'd like.
+From the Main Menu, select `Assets > Create > Tiles > Isometric Rule Tile`. Rename it in your <strong>Assets</strong> folder to whatever you'd like.
 
 Next, Go to `Window > 2D Object > Tilemap` to set up our tiles to paint. Create a new Isometric tile palette, then drag and drop the Isometric Rule Tile Asset into the Palette window.
 
@@ -20,7 +20,7 @@ Next, Go to `Window > 2D Object > Tilemap` to set up our tiles to paint. Create 
     </a>
 </figure>
 
-Configure a <strong>Default Sprite</strong> for each of our rules to work off of. In the Inspector panel click the <strong>Select</strong> button in the box highlighted in red in the figure below. Choose a default sprite like a plain grass texture to start off with. <strong>Default Game Object</strong> can remain blank and <strong>Default Collider</strong> can be left on `Sprite`.
+Select a <strong>Default Sprite</strong> for each of our rules to work off of. In the <strong>Inspector</strong> panel, click the <strong>Select</strong> button in the box highlighted in red in the figure below. Choose a default sprite like a plain grass texture to start off with. <strong>Default Game Object</strong> can remain blank and <strong>Default Collider</strong> can be left on `Sprite`.
 
 <figure>
     <a href="/images/isometric-rule-tile-inspector.png" class="lightbox">
@@ -49,13 +49,13 @@ After applying the tiling rules, select your rule tile in the Tile Palette and p
 
 ### 3. Tile Randomization
 
-If you have some tiles you'd like to randomize throughout your scene, you can do so with Rule Tiles. Click on your rule tile in the Assets folder and go to the Inspector and add another rule. Click on the <strong>Output</strong> drop-down, and select Random. 
+You can randomize tiles with Rule Tiles throughout the scene. Click on your rule tile in the <strong>Assets</strong> folder and go to the Inspector and add another rule. Click on the <strong>Output</strong> drop-down, and select `Random`. 
 
-Set the <strong>Size</strong> and select the second sprite tile you would like to neighbor with. In this case, I'm adding variation across my plain grass texture. Adding the same sprite to the liste multiple times weights how often it shows up; the more copies, the more common it is. 
+Set the <strong>Size</strong> and select the second sprite tile you would like to neighbor with. In this case, I'm adding variation across my plain grass texture. Adding the same sprite to the list multiple times weights how often it shows up; the more copies, the more common it is. 
 
-Use the <strong>Noise</strong> slider controles how tightly or loosely the random tiles scatter.
+Use the <strong>Noise</strong> slider to control how tightly or loosely the random tiles scatter.
 
-The <strong>Shuffle</strong> settings allow you to flip and rotate each sprite. Use Mirror X, Mirror Y, and Mirror XY to rotate on the 2D scene and keeps a flat 2D look. The Rotate and and Rotated Mirror settings spin the sprite on the Z axis. For isometric tiles these usually look wrong, since the rotation breaks the fixed viewing angle.
+<strong>Shuffle</strong> allows you to flip and rotate each sprite. Use Mirror X, Mirror Y, and Mirror XY to rotate on the 2D scene and keeps a flat 2D look. The Rotate and and Rotated Mirror settings spin the sprite on the Z axis. For isometric tiles these usually look wrong, since the rotation breaks the fixed viewing angle.
 
 <figure>
   <video src="/videos/painting-random-rule-tiles.webm" width="3840" height="2076"
@@ -64,7 +64,7 @@ The <strong>Shuffle</strong> settings allow you to flip and rotate each sprite. 
 
 ### References
 
-- [Using Rule Tiles Tutorial from Unity](https://learn.unity.com/tutorial/using-rule-tiles)
+- <a href="https://learn.unity.com/tutorial/using-rule-tiles" target="_blank" rel="noopener noreferrer">Using Rule Tiles Tutorial from Unity</a>
 
 
 

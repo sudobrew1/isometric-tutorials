@@ -3,7 +3,7 @@ layout: base.njk
 title: "Part 2 - Creating a New Project"
 ---
 
-Let's get started with creating a new project for our pre-rendered isometric game. Open up Godot and follow the steps below.
+Let's get started with creating a new project for our pre-rendered isometric game. Open up Unity and follow the steps below.
 
 ### 1. Getting Started
 

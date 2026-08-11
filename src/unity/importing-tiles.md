@@ -11,7 +11,7 @@ This tutorial will show you how to import and paint flat and slab (3D looking) t
 
 ### 1. Importing
 
-Importing assets in Unity is pretty straight-forward. Navigate to your folder in your file manager where you've stored your rendered 128x256 (or different resolution) textured tiles and open it. In Unity, select the "Assets" folder in the Project tab and create a new file called "Tiles." Double-click it and select the tiles from your file manager, then drag and drop it into your "Tiles" folder in Unity.
+Navigate to your folder in your file manager where you've stored your rendered 128x256 (or different resolution) textured tiles and open it. In Unity, select the <strong>Assets</strong> folder in the <strong>Project</strong> tab and create a new file called `Tiles`. Double-click the file and select the tiles from your file manager, then drag and drop it into your "Tiles" folder in Unity.
 
 ### 2. Painting Tiles
 
@@ -24,7 +24,7 @@ In the Main Menu at the top left, go to `Window > 2D > Tile Palette`. This will 
     </a>
 </figure>
 
-In the "Create New Tile Palette" drop-down, select, "Create New Tile Pallet." Rename it to something like "Ground," set the Grid size to `Isometric` and click "Create." A "Create palette into folder" file explorer window will appear and it should point to your "Tiles" folder that we are currently in. Click Select Folder and drag and drop your tiles into the palette.
+In the <strong>Create New Tile Palette</strong> drop-down, select, `Create New Tile Pallet`. Rename it to something like `Ground`, set the <strong>Grid</strong> size to `Isometric` and click <strong>Create</strong>. The "Create palette into folder" file explorer window will appear and it should point to the current <strong>Tiles</strong> folder. Click `Select Folder` and drag and drop your tiles into the palette.
 
 <figure>
     <a href="/images/unity-tile-palette-too-big.png" class="lightbox">
@@ -33,9 +33,9 @@ In the "Create New Tile Palette" drop-down, select, "Create New Tile Pallet." Re
     </a>
 </figure>
 
-It looks like our tiles are a little too big, so we'll scale them exactly to the size that we need so it fits a single face of the isometric grid. Select all of your tile assets in the Assets folder, and in `Sprite Mode > Pixels Per Unit` in the Inspector panel, set the value from `100` to `256` (or whatever the width is for your tiles), then click the "Apply" button at the bottom of the Inspector.
+It looks like our tiles are a little too big, so we'll scale them exactly to the size that we need so it fits a single face of the isometric grid. Select all of your tile assets in the Assets folder, and in `Sprite Mode > Pixels Per Unit` in the <strong>Inspector</strong> panel, set the value from `100` to `256` (or whatever the width is for your tiles), then click the <strong>Apply</strong> button at the bottom of the Inspector.
 
-If you would like to move your tiles in the Tile palette for better organization, select Edit (pencil icon), Select (cursor icon along the top buttons), select your tile you wish to move, then click Move Selection.
+If you would like to move your tiles in the Tile Palette for better organization, select Edit (pencil icon), Select (cursor icon along the top buttons), select your tile you wish to move, then click Move Selection.
 
 <figure>
   <video src="/videos/moving-tiles.webm" width="1068" height="1502"
@@ -66,7 +66,7 @@ Importing and painting slab tiles (tiles with depth) can be a little tricky, but
 
 "If you don't assign a render pipeline asset in your project, Unity uses the Built-In Render Pipeline which is deprecated. Migrate your project to the Universal Render Pipeline instead."
 
-But rest assured, as long as you chose the "Universal 2D" template when creating this project, it should already be using 2D URP. As of 2026, Unity is currently depricating it's old, built-in rendering pipeline for this new one.
+But rest assured, as long as you chose the <strong>Universal 2D</strong> template when creating this project, it should already be using 2D URP. As of 2026, Unity is currently depricating it's old, built-in rendering pipeline for this new one.
 
 ### 4. Transparency Sort Axis
 
@@ -76,7 +76,7 @@ This tells the renderer to decide draw order by each sprite's Y position instead
 
 ### 5. Setting Tiles to Individual Mode
 
-Next, click on the "Tilemap" object in the Hierarchy, go to the Inspector, under <strong>Tilemap Renderer</strong>, set the <strong>Mode</strong> from `Chunk` to `Individual`.
+Next, click on the "Tilemap" object in the Hierarchy, go to the <strong>Inspector</strong>, under <strong>Tilemap Renderer</strong>, set the <strong>Mode</strong> from `Chunk` to `Individual`.
 
 <strong>Chunk mode</strong> will batch all the tiles in a tilemap into a small number of combined meshes and draw them as units and it's fast. However, a batch has only one position and sort key, so the tiles can't be sorted against eachother or anything else. 
 
@@ -95,11 +95,11 @@ To adjust, select the sprite you want to edit in your Asset folder and go to `Wi
     </a>
 </figure>
 
-In <strong>Pivot</strong>, click the `Center` drop-down and select `Custom`. Set the <strong>Pivot Unit Mode</strong> to pixels. For the Y value, subtract `136 - 128 = 8`. 136 is the sprite's current hight and 128 is the height of a normal flat sprite. The difference between these two values is what you should add to the Y value for the pivot, so `68 + 8 = 72`. Replace `68` with `72` in the Y value and hit Apply. Do these for each of the tiles you have in your assets. You can write a C# script to automate this process, which I'll add to this tutorial at a later date.
+In <strong>Pivot</strong>, click the `Center` drop-down and select `Custom`. Set the <strong>Pivot Unit Mode</strong> to pixels. For the Y value, subtract `136 - 128 = 8`. 136 is the sprite's current hight and 128 is the height of a normal flat sprite. The difference between these two values is what you should add to the Y value for the pivot, so `68 + 8 = 72`. Replace `68` with `72` in the Y value and hit Apply. Do these for each of the tiles you have in your assets. You can write a C# script to automate this process, which will be added to this tutorial at a later date.
 
 ### 6. Painting Slab Tiles
 
-Follow step 2. Painting Tiles again to open a Tile Palette and add this time, add your slab tiles. Again, left-click to paint your tiles with the brush tool selected. There should be no tiles clipping through eachother and fit evenly into the Tilemap.
+Follow step <strong>2. Painting Tiles</strong> again to open a Tile Palette and add slab tiles. Again, left-click to paint your tiles with the brush tool selected. The tiles should not be clipping through each other and fit evenly into the Tilemap.
 
 <figure>
   <video src="/videos/painting-slab-tiles.webm" width="3840" height="2076"

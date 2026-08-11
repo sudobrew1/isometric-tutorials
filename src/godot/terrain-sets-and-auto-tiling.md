@@ -7,11 +7,11 @@ Terrain Sets are Godot's auto-tiling system. It picks the correct transition spr
 
 ### 1. Using the Atlas Merging Tool
 
-Atlas Merging merges all of your sprites into a single image.
+<strong>Atlas Merging</strong> merges all of your sprites into a single image.
 
-From the last tutorial <strong>Importing Tiles</strong>, we created a TileSet on our TileMapLayer called "Ground". Click on the TileSet tab on the bottom, then from your assets folder, drag and drop your tiles into <strong>Tile Sources</strong>. Click <strong>Yes</strong> on the "Auto Create Tiles" prompt.
+From the last tutorial <a href="/godot/importing-tiles/" target="_blank" rel="noopener noreferrer"><strong>Importing Tiles</strong></a>, we created a TileSet on our TileMapLayer called <strong>Ground</strong>. Click on the <strong>TileSet</strong> tab on the bottom, then from your assets folder, drag and drop your tiles into <strong>Tile Sources</strong>. Click <strong>Yes</strong> on the "Auto Create Tiles" prompt.
 
-Under the <strong>Tile Sources</strong> panel, click on the button with three vertical dots, then click "Open Atlas Merging Tool". Select all of your tiles to merge them into one image. You can adjust the "Next Line After Column" number to make the image more compact or wide.
+Under the <strong>Tile Sources</strong> panel, click the three vertical dots button, then click </strong>Open Atlas Merging Tool</strong>. Select all of your tiles to merge them into one image. You can adjust the <strong>Next Line After Column</strong> number to make the image more compact or wide.
 
 <figure>
   <video src="/videos/atlas-merging-tool.webm" width="3840" height="2076"
@@ -22,7 +22,7 @@ Now we are ready to make our Terrain Set!
 
 ### 2. Creating the Terrain Set
 
-In the <strong>Inspector</strong>, `Tile Set > Terrain Sets`, click on <strong>+ Add Element</strong>. Keep the <strong>Mode</strong> on `Match Corners and Sides`. Under <strong>Terrains</strong>, click on <strong>+ Add Element</strong>. Name it "Ground". <strong>Color</strong> doesn't change the sprite at all, it's just an in-engine color that represents what sides will match where. You can change it to whatever you want.
+In the <strong>Inspector</strong>, `Tile Set > Terrain Sets`, click on <strong>+ Add Element</strong>. Keep the <strong>Mode</strong> on `Match Corners and Sides`. Under <strong>Terrains</strong>, click on <strong>+ Add Element</strong>. Name it `Ground`. <strong>Color</strong> doesn't change the sprite at all, it's just an in-engine color that represents what sides will match where. You can change it to whatever you want.
 
 Next, on the <strong>TileSet</strong> tab, select the <strong>Paint</strong> button at the top and under `Paint Properties > Select a property editor`, go to `Rendering > Terrains`. Set the <strong>Terrain Set</strong> to `Terrain Set 0` and under <strong>Terrain</strong>, set it to `Ground`.
 
