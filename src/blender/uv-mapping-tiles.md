@@ -6,7 +6,7 @@ title: "Part 3 - UV Mapping Tile Textures"
 UV mapping is the process of "unwrapping" a 3D object's surface and laying it flat. Think about it like cutting apart a cardboard box and flattening it out. This creates a canvas that is used as a guide to wrap 2D textures, images and colors onto the 3D model.
 
 ### 1. Open The Tile .blend Project
-After completing the <strong><a href="/blender/modeling-tiles/">Modeling Tiles</a></strong> tutorial, open up the `.blend` file containing your newly made tile. Click on the UV Editing Tab.
+After completing the <strong><a href="/blender/modeling-tiles/">Modeling Tiles</a></strong> tutorial, open up the `.blend` file containing your newly made tile. Click on the <strong>UV Editing Tab</strong>.
 
 <figure>
     <a href="/images/uv_editing_tab.png" class="lightbox">
@@ -17,7 +17,7 @@ After completing the <strong><a href="/blender/modeling-tiles/">Modeling Tiles</
 
 ### 2. Find and Import a Texture
 
-There are many sites to find textures online, but the most realiable site I've found is <strong><a href="https://www.ambientcg.com" target="_blank" rel="noopener noreferrer">ambientcg.com</a></strong>. It contains thousands of high-quality and seemless textures for your 3D models for free. In this tutorial, I will be using Grass004 from this website. Feel free to download any texture at any resolution as you wish.
+There are many sites to find textures online, but the most realiable site I've found is <strong><a href="https://www.ambientcg.com" target="_blank" rel="noopener noreferrer">ambientcg.com</a></strong>. It contains thousands of high-quality and seemless textures for your 3D models for free. In this tutorial, I will be using Grass004 from this website. Feel free to download any texture at any resolution you'd like.
 
 Next, unzip the folder containing your chosen texture and open in your file manager.
 
@@ -28,11 +28,11 @@ Next, unzip the folder containing your chosen texture and open in your file mana
     </a>
 </figure>
 
-As you can see, there's not just the image for the texture itself (aka color map), but other texture maps. These affect the geometry like normal and displacement maps, giving your texture depth as well as reflectance and occlusion to give it roughness or metallic look and soft shadows that show up where surfaces get close together. For now, we are only going to use the color map. For this example, I will use `Grass004_1K-JPG_Color.jpg`.
+In the folder, there's not just the image (the color map) for the texture itself, but other texture maps. These affect the geometry like normal and displacement maps, giving your texture depth as well as reflectance and occlusion to give it roughness or metallic look and soft shadows that show up where surfaces get close together. For now, we are only going to use the color map and will use`Grass004_1K-JPG_Color.jpg`.
 
-In Blender, click on the "Plane" object in the Scene collection, press `Tab` to make sure you're in `Object Mode` and in the Properties panel underneath, select the Material Properties <img src="/images/material_properties_icon.png" alt="Material Properties Icon" class="ui-icon"> tab.
+In Blender, click on the "Plane" object in the Scene collection, press `Tab` to go into `Object Mode` and in the Properties panel, select the Material Properties <img src="/images/material_properties_icon.png" alt="Material Properties Icon" class="ui-icon"> tab.
 
-Click the "New +" button and a new material will be added to your Plane object.
+Click the <strong>New +</strong> button and a new material will be added to your Plane object.
 
 <figure>
     <a href="/images/material_properties_panel.png" class="lightbox">
@@ -41,9 +41,9 @@ Click the "New +" button and a new material will be added to your Plane object.
     </a>
 </figure>
 
-In the "Surface" section, click on the yellow dot left to "Base Color" and select "Image Texture," underneath the "Texture" section. Options appear underneath "Base Color" to create a new or add an existing texture from your filesystem. Click on the "Open" button and select the color map image. Again, in this example it's `Grass004_1K-JPG_Color.jpg`.
+In the <strong>Surface</strong> section, click on the yellow dot left to <strong>Base Color</strong> and select <strong>Image Texture</strong>, under the <strong>Texture</strong> section. Options appear under <strong>Base Color</strong> to create a new or add an existing texture from your filesystem. Click on the <strong>Open</strong> button and select the color map image. Again, in this example it's `Grass004_1K-JPG_Color.jpg`.
 
-If you are not already on "Material Preview" in your Viewport Shading settings, go ahead and click on it in the upper right-hand corner of your viewport so you can actually see the texture being applied to the Plane.
+If you are not already on <strong>Material Preview</strong> in your Viewport Shading settings, click on it in the upper right-hand corner of the viewport and see the texture being applied to the Plane.
 
 <figure>
     <a href="/images/material_preview_example.png" class="lightbox">
