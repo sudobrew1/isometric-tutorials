@@ -22,9 +22,9 @@ Importing assets in Godot is very easy. In the <strong>FileSystem</strong> panel
 
 ### 2. Create a TileMapLayer Node
 
-In the Scene panel, just above the FileSystem panel to the left, right-click <strong>Node2D</strong> >+ Add Child Node. Search for <strong>TileMapLayer</strong> (don't select TileMap since it's being deprecated) and click <strong>Create</strong>.
+In the Scene panel, just above the FileSystem panel to the left, right-click <strong>Node2D > + Add Child Node</strong>, then search for <strong>TileMapLayer</strong> (don't select TileMap since it's being deprecated) and click <strong>Create</strong>.
 
-The new TileMapLayer node should appear under <strong>Node2D</strong>. Right-click and rename it to "Ground". In the <strong>Inspector</strong> panel to the right, go to <strong>Tile Set</strong> click the drop-down and select `New > TileSet`. At the bottom of the screen, a <strong>TileSet</strong> panel will appear. On the Inspector, click on <strong>TileSet</strong> and you will see its current settings.
+The new TileMapLayer node should appear under <strong>Node2D</strong>. Right-click and rename it to `Ground`. In the <strong>Inspector</strong> panel to the right, go to <strong>Tile Set</strong> click the drop-down and select `New > TileSet`. At the bottom of the screen, a <strong>TileSet</strong> panel will appear. On the Inspector, click on <strong>TileSet</strong> and you will see its current settings.
 
 Right now, the <strong>Tile Shape</strong> is set to `Square` so set it to `Isometric`. Next, set the <strong>Tile Size</strong> to `X=256, Y=128`. Click on <strong>TileMap</strong> at the bottom panel and the Scene should look like this:
 
@@ -48,7 +48,7 @@ Drag and drop the tiles from the `asset > tiles` folder into <strong>Tile Source
     </a>
 </figure>
 
-Select <strong>Yes</strong> so that Godot automatically scans the texture and creates a tile for every non-transparent pixel it finds that's configured in the <strong>Texture Region Size</strong> which is set to 256x128. This is inherited from the Tile Size settings in the Inspector's TileMapLayer.
+Select <strong>Yes</strong> so that Godot automatically scans the texture and creates each tile for every non-transparent pixel it finds that is set in the <strong>Texture Region Size</strong> which is set to 256x128. This is inherited from the Tile Size settings in the Inspector's TileMapLayer.
 
 <figure>
     <a href="/images/texture-region-inherits-from-tile-size.png" class="lightbox">
@@ -59,7 +59,7 @@ Select <strong>Yes</strong> so that Godot automatically scans the texture and cr
 
 ### 4. Painting Tiles
 
-Now we can individually paint our own tiles. Click on the<strong>TileMap</strong> tab at the bottom, select the tile .png and then select the Base Tile in the editor. left-click and drag on the grid in your scene to paint. You can use the Paint (pencil icon), Line Rect, Bucket and Erase Tool at the top of the TileMap editor to create your level.
+Now we can individually paint the tiles. Click on the<strong>TileMap</strong> tab at the bottom, select the tile .png and then select the Base Tile in the editor. left-click and drag on the grid in your scene to paint. You can use the Paint (pencil icon), Line, Rect, Bucket and Erase Tool at the top of the TileMap editor to create your level.
 
 <figure>
   <video src="/videos/painting-flat-tiles-godot.webm" width="3840" height="2076"
@@ -68,9 +68,9 @@ Now we can individually paint our own tiles. Click on the<strong>TileMap</strong
 
 ### 5. Slab Tiles
 
-Slab tiles will have extra height to them and need to be configured properly before painting.
+Slab tiles will have extra height to them and will need to have the proper settings applied before painting.
 
-Import the slab tiles into your `assets > tiles` folder or add another folder in the same project. Then create a TileMapLayer.
+Import the slab tiles into your `assets > tiles` folder or add another folder in the same project, then create a TileMapLayer.
 
 In the Inspector, change the <strong>Tile Size</strong> to `X=256 Y=256`. The tiles I'm using have a height of 256px, so set your slab tile height to whatever you've made them to be. Select the <strong>TileSet</strong> tab at the bottom and drag and drop the tiles into <strong>Tile Sources</strong>. The "Auto Create Tiles" prompt will appear. Select <strong>No</strong> for now.
 
@@ -90,7 +90,7 @@ Next, in the Inspector panel, change the height back to 128px. The reason why we
     </a>
 </figure>
 
-In the <strong>TileSet</strong> tab, there's a very faint, orange diamond of where our texture origins are set. Notice, it's not aligned with the top face of the tile like it should be.
+In the <strong>TileSet</strong> tab, there's a very faint, orange diamond of where our texture origins are set. Right now, it's not aligned with the top face of the tile like it should be.
 
 <figure>
     <a href="/images/texture-origin-improperly-set.png" class="lightbox">
@@ -99,7 +99,7 @@ In the <strong>TileSet</strong> tab, there's a very faint, orange diamond of whe
     </a>
 </figure>
 
-Let's go ahead and change its offset. Click the <strong>Select</strong> tab > Rendering and change the <strong>Texture Origin</strong> Y value to the height where the top face of the tile sits. In this case with a 256x256 image, I divided 128 by 2, `128 / 2 = 64`. 64 for the Y value would only cover the bottom face of the tile, so in order to adjust, I subtracted 8 pixels for the slab's thickness `64 - 8 = 56`. 56px will be the Y offset.
+Change its offset. Click the <strong>Select</strong> tab > Rendering and change the <strong>Texture Origin</strong> Y value to the height where the top face of the tile sits. In this case with a 256x256 image, I divided 128 by 2, `128 / 2 = 64`. 64 for the Y value would only cover the bottom face of the tile, so in order to adjust, I subtracted 8 pixels for the slab's thickness `64 - 8 = 56`. 56px will be the Y offset.
 
 Once the offset is correct, a faint, blue diamond will appear covering the entire top of the tile's face.
 
@@ -119,7 +119,7 @@ Now when painting slab tiles, you may notice these thin lines appearing in betwe
     </a>
 </figure>
 
-To fix this issue, go to `Project > Project Settings > Rendering > Textures` and turn <strong>Default Texture Filter</strong> to `Nearest`. Then go to the 2D settings under Rendering and turn on <strong>Snap 2D Transforms to Pixel</strong> and <strong>Snap 2D Vertices to Pixel</strong> and reload the scene. Your tiles should now be uniform without any lines in between.
+To fix this issue, go to `Project > Project Settings > Rendering > Textures` and turn <strong>Default Texture Filter</strong> to `Nearest`. Then go to the 2D settings under Rendering and turn on <strong>Snap 2D Transforms to Pixel</strong> and <strong>Snap 2D Vertices to Pixel</strong> and reload the scene. The tiles should be uniform without any lines in between.
 
 ### Video References
 
