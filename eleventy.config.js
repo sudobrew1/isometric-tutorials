@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
     level: [2, 3],
     permalink: false,
   });
-
+  eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
   eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPlugin(syntaxHighlight);
