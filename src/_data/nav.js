@@ -6,8 +6,7 @@ module.exports = [
       { label: "Installing", url: "/blender/installing/" },
       { label: "Modeling Tiles", url: "/blender/modeling-tiles/" },
       { label: "UV Mapping Tile Textures", url: "/blender/uv-mapping-tiles/" },
-      { label: "Texture Painting Tiles", url: "/blender/texture-painting-tiles/" },
-      { label: "Blender Templates", url: "/blender/blender-templates/" }
+      { label: "Texture Painting Tiles", url: "/blender/texture-painting-tiles/" }
     ],
   },
   {
@@ -30,4 +29,8 @@ module.exports = [
       { label: "Rule Tiles", url: "/unity/rule-tiles/" }
     ],
   },
+    {
+    label: "Resources",
+    url: "/resources/"
+  }
 ];
