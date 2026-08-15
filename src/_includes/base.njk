@@ -13,6 +13,7 @@
             <button class="nav-toggle" aria-expanded="false" aria-controls="sidebar">
             <span class="sr-only">Menu</span>
             <span aria-hidden="true">☰</span>
+            </button>
         </div>
     </header>
     <div class="layout">
@@ -20,22 +21,29 @@
             <h2>Navigation</h2>
               <ul>
                 {% for group in nav %}
-                <li>
-                    <details {% if group.open %}open{% endif %}>
-                        <summary>{{ group.label }}</summary>
-                        <ul>
-                            {% for item in group.items %}
-                            <li>
-                                <a href="{{ item.url }}"
-                                   {% if item.url == page.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
-                                {% if item.url == page.url %}
-                                {{ content | toc | safe }}
-                                {% endif %}
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </details>
-                </li>
+                  {% if group.items %}  
+                        <li>
+                            <details {% if group.open %}open{% endif %}>
+                                <summary>{{ group.label }}</summary>
+                                <ul>
+                                    {% for item in group.items %}
+                                    <li>
+                                        <a href="{{ item.url }}"
+                                            {% if item.url == page.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+                                        {% if item.url == page.url %}
+                                        {{ content | toc | safe }}
+                                        {% endif %}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </details>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="{{ group.url }}" class="nav-standalone"
+                                {% if group.url == page.url %}aria-current="page"{% endif %}>{{ group.label }}</a>
+                        </li>
+                        {% endif %}
                 {% endfor %}
             </ul>
         </nav>
@@ -48,7 +56,7 @@
     </div>
     <footer>
         <div class="bar">
-            <p>Made free for anyone learning · sudobrew</p>
+            <p>Made free for anyone learning · <a href="https://github.com/sudobrew1" target="_blank" rel="noopener noreferrer">sudobrew</a> · {{ currentYear }}</p>
             {% if not hideBackToTop %}
             <a href="#top" class="to-top">Back to top ↑</a>
             {% endif %}
@@ -60,6 +68,5 @@
 
     <script src="/js/lightbox.js" defer></script>
     <script src="/js/nav-toggle.js" defer></script>
-</body>
 </body>
 </html>

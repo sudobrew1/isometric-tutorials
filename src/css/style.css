@@ -7,14 +7,21 @@ body {
     align-items: stretch;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    flex:1;
+    flex:1 1 0;
     min-width: 0;
-    max-width: 50rem;
     padding-right: 2rem;
+    width: 100%;
     line-height: 1.5;
+}
+
+main article {
+  max-width: 50rem;
 }
  
 main img {
@@ -58,9 +65,12 @@ header .bar{
 }
 
 .bar, .layout {
+    width: 100%;
     max-width: 100rem;
     margin-inline: auto;
     padding-inline: 1.5rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .bar a:link, .bar a:visited {
@@ -70,16 +80,16 @@ header .bar{
 .layout {
     display: flex;
     gap: 2rem;
+    flex: 1;
 }
 
 h1, h2, h3, h4{
     color: azure;
 }
 
-h1 a:link, h1 a:visited, a:link, p :visited {
+h1 a:link, h1 a:visited, a:link, p a:visited {
     color: azure;
     text-decoration: none;
-
 }
 
 li {
@@ -159,6 +169,19 @@ p {
   display: block;
   padding-block: 0.3rem;
   padding-left: 0.75rem;
+}
+
+/* Standalone pages */
+.sidebar .nav-standalone {
+  padding-block: 0.35rem;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: azure;
+}
+
+.sidebar a.nav-standalone:link,
+.sidebar a.nav-standalone:visited {
+  color: azure;
 }
 
 /* The TOC */
