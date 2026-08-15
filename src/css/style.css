@@ -419,6 +419,7 @@ main {
     z-index: 20;
     margin-top: 0;
     border-left: 0;
+    height: 100dvh;
     background: #16181d;
     padding: 1.5rem;
     overflow-y: auto;
