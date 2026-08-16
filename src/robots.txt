@@ -1,0 +1,4 @@
+# DEV ONLY - do not merge to main
+
+User-agent: *
+Disallow: /
