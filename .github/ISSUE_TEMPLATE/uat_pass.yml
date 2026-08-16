@@ -1,0 +1,124 @@
+name: UAT pass
+description: Manual verification of a preview or production build
+title: "[UAT]: "
+labels: ["uat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Work through the checklist below. Tick what passes.
+
+        **Don't describe failures here** — open a separate bug report for each one
+        and link it in the Notes section at the bottom. This issue tracks coverage;
+        the bug reports track detail.
+
+  - type: input
+    id: url
+    attributes:
+      label: URL tested
+      placeholder: https://develop.isometric-tutorials.pages.dev
+    validations:
+      required: true
+
+  - type: input
+    id: build
+    attributes:
+      label: Commit or PR
+      description: Which build is this? Short commit hash or PR number.
+      placeholder: a3f9c21 or #47
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Firefox 141 / Safari 18.2
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and viewport
+      description: Include orientation and approximate width if on mobile.
+      placeholder: Pixel 7, portrait, 412px
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: layout
+    attributes:
+      label: Layout
+      options:
+        - label: No horizontal scrolling on any page
+        - label: Header background spans the full viewport width
+        - label: Sidebar stays in a fixed position across pages
+        - label: Footer aligns with the content and sits at the bottom on short pages
+        - label: Images stay inside the article column
+        - label: Tables scroll within their own box without widening the page
+        - label: Code blocks scroll horizontally without breaking layout
+
+  - type: checkboxes
+    id: mobile
+    attributes:
+      label: Mobile
+      options:
+        - label: Hamburger button visible below 768px, hidden above
+        - label: Tapping it opens the nav, tapping again closes it
+        - label: The nav drawer scrolls when its content is tall
+        - label: Nav links are comfortably tappable
+        - label: Figures stack rather than sitting side by side
+
+  - type: checkboxes
+    id: navigation
+    attributes:
+      label: Navigation
+      options:
+        - label: Every sidebar link resolves (no 404s)
+        - label: Current page is highlighted in the sidebar
+        - label: Table of contents appears only for the current page
+        - label: TOC links jump to the correct heading
+        - label: Site title returns to the home page
+        - label: Resources page links open on GitHub in a new tab
+
+  - type: checkboxes
+    id: media
+    attributes:
+      label: Media
+      options:
+        - label: Every video plays
+        - label: Video controls work (play, pause, fullscreen)
+        - label: Clicking a screenshot opens the lightbox
+        - label: Escape and clicking outside both close the lightbox
+        - label: External links open in a new tab and reach the right page
+        - label: Download and repo links work
+
+  - type: checkboxes
+    id: content
+    attributes:
+      label: Content
+      options:
+        - label: No placeholder text on pages marked complete
+        - label: No visible typos in headings or navigation labels
+        - label: Screenshots match the current Blender, Godot, and Unity versions
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Pass
+        - Pass with minor issues
+        - Fail
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Bugs found and notes
+      description: Link any bug reports you opened, plus anything that doesn't fit a checkbox.
+      placeholder: |
+        - #48 sidebar doesn't close after tapping a link
+        - Godot install page feels thin, might need a screenshot
